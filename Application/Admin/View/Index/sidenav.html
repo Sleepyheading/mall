@@ -1,0 +1,13 @@
+<?php
+    $navs = D("Menu")->getAdminMenus();
+?>
+<ul class="nav navbar-nav side-nav navbar-default">
+    <li>
+        <a href="{:U('Index/index')}">首页</a>
+    </li>
+    <foreach name="navs" item="v">
+        <li>
+            <a href="{$v|getAdminMenuUrl}" >{$v.name}</a>
+        </li>
+    </foreach>
+</ul>
