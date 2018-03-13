@@ -72,19 +72,18 @@
 
 <div class="container" >
     <div class="row">
-        <div class="col-xs-3" style="padding-left: 60px">
+        <div class="col-xs-3 center" >
             <a href="/index.php" >
-                <img src="/Public/img/logo.png" style="width: 260px"></a>
+                <img src="/Public/img/logo.png" ></a>
         </div>
-        <div class="col-xs-7 text-center" style="padding-left:50px;padding-top:40px;">  
+        <div class="col-xs-7 text-center" style="padding-left:50px;padding-top:20px;">
 
             <div class="searchbox">
-                <span class="glyphicon glyphicon-search" style="position:absolute;left:10px;font-size: 17px;top:14px;color: #e8e8e8"></span>
-                <input type="text" style="outline:none;border: 2px #d9534f solid;height:45px;width:500px;float: left;padding-left: 28px;"/>
-                <input type="button" value="搜索" style="background-color: #d9534f;color: white;float:left;outline:none;border: none;height: 45px;font-size: 16px;padding: 0px 30px;"></div>
-
+                <span class="glyphicon glyphicon-search" style="position:absolute;left:10px;font-size: 17px;top:11px;color: #e8e8e8"></span>
+                <input type="text" style="outline:none;border: 2px #d9534f solid;height:37px;width:400px;float: left;padding-left: 28px;"/>
+                <input type="button" value="搜索" style="background-color: #d9534f;color: white;float:left;outline:none;border: none;height: 37px;font-size: 16px;padding: 0px 30px;"></div>
         </div>
-        <div class="col-xs-2" style="padding-top: 45px;">
+        <div class="col-xs-2" style="padding-top: 20px;">
             <div class="col-xs-6">
                 <a class="btn btn-danger" type="button" href="<?php echo U('cart/index');?>">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
@@ -265,29 +264,14 @@
 			var newprice=(price*num);
 			var url="<?php echo U('cart/upCart');?>";
 			data={cart_id:id,product_num:num};
-			$.ajax({
-				url:url,
-				type:'post',
-				data:data,
-				success:function(result){
-					if(result.status==1){
-						$("#price-"+id).html(newprice);
-						$(".total").each(function(){
-							    $(this).html(result.data);
-							  });
-					}
-				},
-				dataType:'json'
-
-			});
-			// $.post(url,data,function(result){
-			// 	if(result.status==1){
-			// 		$("#price-"+id).html(newprice);
-			// 		$(".total").each(function(){
-			// 		    $(this).html(result.data);
-			// 		  });
-			// 	}
-			// },"JSON");
+			$.post(url,data,function(result){
+				if(result.status==1){
+					$("#price-"+id).html(newprice);
+					$(".total").each(function(){
+					    $(this).html(result.data);
+					  });
+				}
+			},"JSON");
 		}else{
 			$("#num-"+id).val(1);
 		}

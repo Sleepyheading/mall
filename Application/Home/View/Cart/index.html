@@ -107,29 +107,14 @@
 			var newprice=(price*num);
 			var url="{:U('cart/upCart')}";
 			data={cart_id:id,product_num:num};
-			$.ajax({
-				url:url,
-				type:'post',
-				data:data,
-				success:function(result){
-					if(result.status==1){
-						$("#price-"+id).html(newprice);
-						$(".total").each(function(){
-							    $(this).html(result.data);
-							  });
-					}
-				},
-				dataType:'json'
-
-			});
-			// $.post(url,data,function(result){
-			// 	if(result.status==1){
-			// 		$("#price-"+id).html(newprice);
-			// 		$(".total").each(function(){
-			// 		    $(this).html(result.data);
-			// 		  });
-			// 	}
-			// },"JSON");
+			$.post(url,data,function(result){
+				if(result.status==1){
+					$("#price-"+id).html(newprice);
+					$(".total").each(function(){
+					    $(this).html(result.data);
+					  });
+				}
+			},"JSON");
 		}else{
 			$("#num-"+id).val(1);
 		}

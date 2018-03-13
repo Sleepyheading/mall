@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8">
@@ -110,139 +111,163 @@
         </div>
     </nav>
     <hr>    
-<form action="<?php echo U('order/proOrder');?>" method="post">
 <div class="container" >
-	<div class="col-xs-5 text-center" style="padding: 10px ">
-		<div class="col-xs-12" style="padding: 0px">
-			<div style="border:1px solid #e7e7e7;padding: 20px;">
-				<img src="<?php echo ($productdata["img"]); ?>" width="370" ></div>
-		</div>
-		<div class="col-xs-12" style="margin-top: 10px;padding: 0px">
-			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
-				<img src="/Public/img/a.jpg" width="55"></div>
-			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
-				<img src="/Public/img/a.jpg" width="55"></div>
-			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
-				<img src="/Public/img/a.jpg" width="55"></div>
-			<div class="col-xs-3" style="border:1px solid #e7e7e7;padding: 20px;">
-				<img src="/Public/img/a.jpg" width="55"></div>
-		</div>
-	</div>
-	<div class="col-xs-7" style="padding: 10px 40px;font-weight: 700 !important;color: #666 !important;">
-		<h3 style="padding:30px 0px;padding-top: 0px"><?php echo ($productdata["name"]); ?></h3>
-		<h3 style="padding:30px 0px;">
-			库存
-			<span style="color:green;font-size: 20px;margin-left: 30px" id="count"><?php echo ($productdata["count"]); ?></span>
-		</h3>
-		<div class="col-xs-12">
-			<div class="form-inline " style="padding:30px 0px;">
-				<div class="form-group">
-					<div class="input-group">
-						<div class="input-group-addon" style="cursor: pointer" onclick="add()">
-							<span class="glyphicon glyphicon-plus"  ></span>
-						</div>
-						<input type="number" id="num" class="form-control" style="width: 50px !important;" value="1">
-						<div class="input-group-addon" style="cursor: pointer" onclick="cut()">
-							<span class="glyphicon glyphicon-minus"  ></span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-12" style="padding:30px 0px;">
-			<div class="col-xs-5">
-				<a class="btn btn-danger" style="padding:10px 30px;font-weight: 700 !important;font-size:18px"  onclick="post(<?php echo ($productdata["id"]); ?>)" id="buy">立即购买</a>
-			</div>
-			<div class="col-xs-5">
-				<a class="btn btn-danger" style="padding:10px 30px;font-weight: 700 !important;font-size: 18px" onclick="addCart(<?php echo ($productdata["id"]); ?>)" id="addCart">加入购物车</a>
-			</div>
-		</div>
-		</form>
-	</div>
-	<div class="col-xs-12" style="margin-top: 30px;">
-		<ul class="nav nav-tabs">
-			<li role="presentation" class="active" >
-				<a href="#">商品详情</a>
-			</li>
-			<li role="presentation" >
-				<a href="#">累计评论</a>
-			</li>
-		</ul>
-		<div class="col-xs-12 text-center" style="padding:30px" id="info">
-			<?php echo ($productdata["info"]); ?>
-		</div>
-	</div>
+  <div class="col-xs-12" style="margin-bottom: 30px;">
+
+    <div class="col-xs-9">
+      <h2 style="font: bold 20px/40px 'microsoft yahei' !important;color:#75A9E5">推荐商品</h2>
+
+      <div class="col-xs-12" style="padding:20px 0px;border:1px solid #ddd;border-radius: 2px;height: 312px;padding:10px 22px;">
+        <div class="floordata" style="border: none;width:200px;" >
+          <div class="movedraw center">
+            <figure class="movedraw1" style="height: 206px;padding-top: 10px;">
+              <img src="/Public/img/bb1.jpg" height="160"  width="160 " alt="" />
+            </figure>
+
+            <div style="width:100%;height:36px;padding:0px 10px;">
+              <a href="">LG 24MP77HM-P 23.8英寸</a>
+            </div>
+            <div style="width:100%;height:18px;margin-top: 10px;" class="aad">￥1099</div>
+          </div>
+          <div style=""></div>
+        </div>
+        <div class="floordata" style="border-left:1px solid #e7e7e7;width:200px;" >
+          <div class="movedraw center">
+            <figure class="movedraw1" style="height: 206px;padding-top: 10px;">
+              <img src="/Public/img/bb2.jpg" height="160"  width="160 " alt="" />
+            </figure>
+
+            <div style="width:100%;height:36px;padding:0px 10px;">
+              <a href="">LG 24MP77HM-P 23.8英寸</a>
+            </div>
+            <div style="width:100%;height:18px;margin-top: 10px;" class="aad">￥1099</div>
+          </div>
+          <div style=""></div>
+        </div>
+        <div class="floordata" style="border-left:1px solid #e7e7e7;width:200px;" >
+          <div class="movedraw center">
+            <figure class="movedraw1" style="height: 206px;padding-top: 10px;">
+              <img src="/Public/img/bb3.jpg" height="160"  width="160 " alt="" />
+            </figure>
+
+            <div style="width:100%;height:36px;padding:0px 10px;">
+              <a href="">LG 24MP77HM-P 23.8英寸</a>
+            </div>
+            <div style="width:100%;height:18px;margin-top: 10px;" class="aad">￥1099</div>
+          </div>
+          <div style=""></div>
+        </div>
+        <div class="floordata" style="border-left:1px solid #e7e7e7;width:200px;" >
+          <div class="movedraw center">
+            <figure class="movedraw1" style="height: 206px;padding-top: 10px;">
+              <img src="/Public/img/bb1.jpg" height="160"  width="160 " alt="" />
+            </figure>
+
+            <div style="width:100%;height:36px;padding:0px 10px;">
+              <a href="">LG 24MP77HM-P 23.8英寸</a>
+            </div>
+            <div style="width:100%;height:18px;margin-top: 10px;" class="aad">￥1099</div>
+          </div>
+          <div style=""></div>
+        </div>
+
+      </div>
+
+      <!-- <div class="col-xs-4" style="background-color:white !important;border:1px solid #e7e7e7">
+      <div class="movedraw center">
+        <figure class="movedraw1">
+          <img src="/Public/img/bb1.jpg" height="200"  width="200" alt="" />
+        </figure>
+
+        <img src="/Public/img/movedraw.png" class="movedraw-pos">
+        <p >
+          <a href="">LG 24MP77HM-P 23.8英寸</a>
+        </p>
+        <hr>
+        <p style="font-weight: bold;font-size: 18px;color:#C40000">￥1099</p>
+      </div>
+    </div>
+    <div class="col-xs-4" style="background-color:white !important;border:1px solid #e7e7e7">
+      <div class="movedraw center">
+        <figure class="movedraw1">
+          <img src="/Public/img/bb2.jpg" height="200"  width="200" alt="" />
+        </figure>
+
+        <img src="/Public/img/movedraw.png" class="movedraw-pos">
+        <p >
+          <a href="">飞利浦（PHILIPS）277E7EDSW</a>
+        </p>
+        <hr>
+        <p style="font-weight: bold;font-size: 18px;color:#C40000">￥1199</p>
+      </div>
+    </div>
+    <div class="col-xs-4" style="background-color:white !important;border:1px solid #e7e7e7">
+      <div class="movedraw center">
+        <figure class="movedraw1">
+          <img src="/Public/img/bb3.jpg" height="200"  width="200" alt="" />
+        </figure>
+
+        <img src="/Public/img/movedraw.png" class="movedraw-pos">
+        <p >
+          <a href="">三星（SAMSUNG）C27F591FD</a>
+        </p>
+        <hr>
+        <p style="font-weight: bold;font-size: 18px;color:#C40000">￥1599</p>
+      </div>
+    </div>
+    -->
+  </div>
+  <div class="col-xs-3" >
+    <h2 style="font: bold 20px/40px 'microsoft yahei' !important;color:#7FD077">销量排行</h2>
+    <div class="right-content">
+      <ul>
+        <li class="num1 curr">
+          <p>
+            <img src="/Public/img/bb2.jpg"  width="140"></p>
+          <a target="_blank" href="#" style="width: 100%;font-size: 14px;text-decoration: none">LG 24MP77HM-P 23.8英寸</a>
+          <div class="intro">￥1199</div>
+        </li>
+        <li class="num2 curr">
+          <a target="_blank" href="#" style="width: 100%;font-size: 14px;text-decoration: none">飞利浦（PHILIPS）277E7EDSW</a>
+        </li>
+        <li class="num3 curr">
+          <a target="_blank" href="#4" style="width: 100%;font-size: 14px;text-decoration: none">三星（SAMSUNG）C27F591FD#</a>
+        </li>
+        <li class="num4 curr">
+          <a target="_blank" href="#" style="width: 100%;font-size: 14px;text-decoration: none">小米（MI）L48M3-AF 48英寸</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
-<script type="text/javascript">
-	$(function(){
-		var count=parseInt($("#count").text());
-		if(count<=0){
-			$('#buy').attr("disabled",true).removeAttr("onclick"); 
-			$('#addCart').attr("disabled",true).removeAttr("onclick"); 
-		}
-	});
-	function post(a){
-		// $.post()
-		var isurl='/index.php/home/common/isLogin2';
-		  $.getJSON(isurl,function(result){
-		  if(result.status==0){
-		    	return pop.success('请先登录', '/index.php/home/login');	
-		    }else if(result.status==1){
-		    	var count=parseInt($("#count").text());
-			    	if($("#num").val()>count){
-			    		return pop.error('库存不足');
-			    	}else{
-			    		var num=parseInt($("#num").val());
-						var url='/index.php/home/order/proOrder/id/'+a+'/num/'+num;
-						window.location.href=url;
-			    	}
-		    }
-		  });
-	}
-	function addCart(product_id){
-		// $.post()
-		var url='/index.php/home/cart/add';
-		var num=$("#num").val();
-		  $.post(url,{product_id:product_id,product_num:num},function(result){
-		  if(result.status==0){
-		    	return pop.error(result.message);	
-		    }else if(result.status==1){
-		    	var cartList=result.data;
-		    	$('#cartList').html(cartList);
-		    	return pop.successshow(result.message);
-		    }
-		  },"JSON");
-	}
-	
-	function add(){
-		var count=parseInt($("#count").text());
-		var num=$("#num").val();
-		if(num<count){
-			num++;
-			$("#num").val(num);
-		}
-		
-	}
-	function cut(){
-		var num=$("#num").val();
-		if (num>1) {
-			num--;
-			$("#num").val(num);
-		}
-	}
-	$("#num").blur(function(){
-		var count=parseInt($("#count").text());
-		var num=$(this).val();
-		if(num<=0){
-			$(this).val(1);
-			return pop.error('购买数量不能少于1');
-		}else if(num>0 && num<count){
-			$(this).val(num);
-		}else{
-			$(this).val(count);
-		}
-	});
-</script>
+<div class="row" style="padding:0px 50px;">
+  <div class="col-xs-2">
+    <h2 style="font: bold 20px/40px 'microsoft yahei' !important;color:#FC8158">所有商品</h2>
+    <hr style=" height:2px;border:none;border-top:2px dotted #e8e8e8;" />
+  </div>
+
+</div>
+<div class="col-xs-12"  >
+
+  <div class="col-xs-12" style="padding:20px 0px;border:1px solid #ddd;border-radius: 2px;">
+    <?php if(is_array($product)): $i = 0; $__LIST__ = $product;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div class="floordata"  <?php if($key != 0): ?>style="border-left:1px solid #e7e7e7;padding:10px"
+      <?php else: ?>
+      style="padding:10px;"<?php endif; ?>>
+      <div class="movedraw center">
+        <figure class="movedraw1" style="height: 206px;padding-top: 10px;">
+          <img src="<?php echo ($v["img"]); ?>" height="180"  width="180" alt="" />
+        </figure>
+
+        <div style="width:100%;height:36px;padding:0px 10px;">
+          <a href="<?php echo U('Productinfo/index',array('id'=>$v['id']));?>"><?php echo ($v["name"]); ?></a>
+        </div>
+        <div style="width:100%;height:18px;margin-top: 10px;" class="aad">￥<?php echo ($v["price"]); ?></div>
+      </div>
+      <div style=""></div>
+    </div><?php endforeach; endif; else: echo "" ;endif; ?>
+</div>
+</div>
+</div>
 <footer style="margin-top: 50px;">
 <div style="height: 260px;background-color: #000;width: 100%">
 	<div class="container" style="padding-top: 40px;">

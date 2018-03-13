@@ -28,13 +28,5 @@ var login = {
 
         },'JSON');
 
-   }
-    // function check(){
-    //     if($_POST){
-    //         return true;
-    //     }else{
-    //         return false;
-    //     }
-    // }
-
+    }
 }

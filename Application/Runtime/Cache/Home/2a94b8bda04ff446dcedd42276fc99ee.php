@@ -72,19 +72,18 @@
 
 <div class="container" >
     <div class="row">
-        <div class="col-xs-3" style="padding-left: 60px">
+        <div class="col-xs-3 center" >
             <a href="/index.php" >
-                <img src="/Public/img/logo.png" style="width: 260px"></a>
+                <img src="/Public/img/logo.png" ></a>
         </div>
-        <div class="col-xs-7 text-center" style="padding-left:50px;padding-top:40px;">  
+        <div class="col-xs-7 text-center" style="padding-left:50px;padding-top:20px;">
 
             <div class="searchbox">
-                <span class="glyphicon glyphicon-search" style="position:absolute;left:10px;font-size: 17px;top:14px;color: #e8e8e8"></span>
-                <input type="text" style="outline:none;border: 2px #d9534f solid;height:45px;width:500px;float: left;padding-left: 28px;"/>
-                <input type="button" value="搜索" style="background-color: #d9534f;color: white;float:left;outline:none;border: none;height: 45px;font-size: 16px;padding: 0px 30px;"></div>
-
+                <span class="glyphicon glyphicon-search" style="position:absolute;left:10px;font-size: 17px;top:11px;color: #e8e8e8"></span>
+                <input type="text" style="outline:none;border: 2px #d9534f solid;height:37px;width:400px;float: left;padding-left: 28px;"/>
+                <input type="button" value="搜索" style="background-color: #d9534f;color: white;float:left;outline:none;border: none;height: 37px;font-size: 16px;padding: 0px 30px;"></div>
         </div>
-        <div class="col-xs-2" style="padding-top: 45px;">
+        <div class="col-xs-2" style="padding-top: 20px;">
             <div class="col-xs-6">
                 <a class="btn btn-danger" type="button" href="<?php echo U('cart/index');?>">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
@@ -99,7 +98,7 @@
         </div>
     </div>
 </div>
-<div style="margin-top:0px;position: relative ;display: block;">
+<div style="margin-top:30px;position: relative ;display: block;">
 	<div style="position: relative;width: min-width:1378px;">
 	<div class="container" style="position: relative">
 	<div style="background-color: #B1191A;position:absolute;top: 0;left:29px;z-index: 999;color: white;padding:7px 0px;width: 210px;height:46px;text-align: center">
@@ -182,19 +181,6 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
-    $.ajax({
-		url:'http://mall.dev/Home/Cart/test',
-		type:'post',
-		data:{id:321},
-		success:function(result){
-			console.log(result.status);
-			console.log(result);
-		},
-		dataType:'json'
-	});
-
-
-
     var ali=$('#lunbonum li');
     var aPage=$('#lunhuanback p');
     var aslide_img=$('.lunhuancenter b');
