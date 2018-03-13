@@ -8,6 +8,8 @@ use Think\Controller;
 class LoginController extends Controller {
 
     public function index(){
+        echo 'done';
+        die;
         if(session('adminUser')) {
            $this->redirect('Index/index');
         }
